@@ -1,4 +1,94 @@
+:root {
+  --white: #fff;
+  --light-gray: #d6e2f0;
+  --grayish-blue: #7b879d;
+  --dark-blue: #1f3251;
+  --background-light-blue: #3685fe;
+  --background-blue: #2b7dfa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  font: 15px 'Outfit', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-blue);
+  background-color: var(--white);
+}
+
+#root {
+  width: 100%;
+}
+
+.o-app {
+  width: 100%;
+  max-width: 25rem;
+  /* max-width: 375px; */
+  aspect-ratio: 375 / 667;
+  max-height: 100vh;
+
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--light-gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o-card {
+  padding: 1.066rem 1.066rem 2.8rem;
+  /* padding: 16px; */
+  background-color: var(--white);
+  max-width: 21.2rem;
+  margin: 0 auto;
+  /* max-width: 318px; */
+  border-radius: 1.066rem;
+  box-shadow: 0 0 20px 20px var(--grayish-gray);
+}
+
+.o-card .o-card__text {
+  padding: 0 1.2rem;
+}
+
+.o-card .o-card__text h1 {
+  font-size: 1.4rem;
+  margin: 2rem auto;
+}
+
+.o-card .o-card__text p {
+  margin: 0 auto;
+  color: var(--grayish-blue);
+}
+
+.o-qrcode {
+  width: 100%;
+  position: relative;
+  padding: 100% 0 0;
+  background-color: var(--background-blue);
+  border-radius: 1.066rem;
+}
+
+.o-qrcode img {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 85.333rem) {
+/* @media screen and (min-width: 1280px) { */
+  .o-app {
+    max-width: 96rem;
+    /* max-width: 1440px; */
+    aspect-ratio: 1440 / 800;
+  }
 }
